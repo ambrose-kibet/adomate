@@ -18,7 +18,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Live Demo Live preview](#-live-demo-live-preview)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -83,9 +83,7 @@
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> The live demo is currently under development.
+## 🚀 Live Demo <a name="live-demo" href="https://adomate-eosin.vercel.app/">Live preview</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
