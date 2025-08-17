@@ -1,28 +1,34 @@
 "use client";
 import { useState } from "react";
 import ColorPicker from "./color-picker";
-import CanvasService from "@/utils/canvas-service";
+import { useDispatch, useSelector } from "react-redux";
 import { updateCanvas } from "@/lib/redux/fabric/fabric-slice";
-import { useDispatch } from "react-redux";
+import { RootState } from "@/lib/redux/store";
 
 const BackgroundSettings: React.FC = () => {
-  const dispatch = useDispatch();
   const [backgroundColor, setBackgroundColor] = useState("#fff");
-  const canvas = CanvasService.getInstance();
-
+  const canvasInstance = useSelector((s: RootState) => s.canvas.canvasInstance);
+  const dispatch = useDispatch();
+  if (!canvasInstance) return;
   const handleColorChange = (color: string) => {
     setBackgroundColor(color);
-    canvas.set({
+    canvasInstance.set({
       backgroundColor: color,
     });
-    const json = JSON.stringify(canvas.toJSON());
-    dispatch(updateCanvas({ canvasJSON: json }));
-    canvas.renderAll();
+    const json = JSON.stringify(canvasInstance.toJSON());
+    dispatch(
+      updateCanvas({
+        canvasJSON: json,
+        canvasWidth: canvasInstance.getWidth(),
+        canvasHeight: canvasInstance.getHeight(),
+      })
+    );
+
+    canvasInstance.renderAll();
   };
 
   return (
     <div>
-      <h2 className="text-sm  font-semibold mb-4">Set Background Color</h2>
       <ColorPicker value={backgroundColor} onColorChange={handleColorChange} />
     </div>
   );
