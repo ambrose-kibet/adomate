@@ -29,6 +29,7 @@
       - [Folder Structure](#folder-structure)
     - [Technology Choices and Trade-offs](#technology-choices-and-trade-offs)
       - [Bonus Features](#bonus-features)
+      - [Known Limitations](#known-limitations)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -186,6 +187,11 @@ project-root/
 
 - **Ability to edit line-height, letter-spacing, and layer duplication**
 - **Ability to toggle between light and dark themes**
+
+#### Known Limitations
+
+- The application uses local storage for state persistence, which may not be suitable for all use cases. It has a size limit and may not handle large datasets efficiently. Future improvements could include server-side storage options for better scalability and reliability.
+- There is limited support for shape and manipulation features.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
