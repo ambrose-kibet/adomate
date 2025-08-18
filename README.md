@@ -182,6 +182,7 @@ project-root/
 - **redux-persist**: To enhance user experience, redux-persist is used for saving and restoring application state across sessions. This is especially important for a design tool, where users expect their work to be preserved even after closing the browser.
 - **redux-undo**: Undo/redo functionality is essential in design applications. Redux-undo integrates seamlessly with Redux Toolkit, allowing users to revert changes easily. Its reliability and recommendation in Redux documentation make it the preferred choice for this feature.
 - **TanStack Virtual**: Rendering large lists efficiently is critical, especially when dealing with over 1800 fonts. TanStack Virtual optimizes list rendering by only displaying visible items, resulting in smooth performance and reduced memory usage.
+- **Fabric.js**: Fabric.js was chosen over alternatives like Konva and direct HTML Canvas API due to its mature ecosystem, extensive documentation, and built-in support for object management and serialization. While Konva offers a modern API and good performance, Fabric.js provides more out-of-the-box features for design tools, such as grouping, history, and SVG export. Direct HTML Canvas requires significant manual implementation for features like object selection and manipulation, increasing development complexity and maintenance overhead.
 
 #### Bonus Features
 
